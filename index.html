@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,15 @@
 
     <meta
         name="description"
-        content="Jason Gonzalez - Finance student at Rutgers Business School interested in financial markets, investment analysis, and risk management."
+        content="Jason Gonzalez is a Finance student at Rutgers Business School focused on financial markets, investment analysis, derivatives, and risk management."
     >
 
     <style>
+
+        /* =========================
+           GENERAL
+        ========================== */
+
         * {
             margin: 0;
             padding: 0;
@@ -23,15 +29,21 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-                Helvetica, Arial, sans-serif;
-
-            background: #f7f8fa;
-            color: #172033;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f6f2;
+            color: #181818;
             line-height: 1.6;
         }
 
-        /* -------------------- NAVIGATION -------------------- */
+        ::selection {
+            background: #cc0033;
+            color: white;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================== */
 
         nav {
             position: sticky;
@@ -42,511 +54,763 @@
             justify-content: space-between;
             align-items: center;
 
-            padding: 18px 8%;
+            padding: 24px 8%;
 
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(247, 246, 242, 0.95);
             backdrop-filter: blur(10px);
 
-            border-bottom: 1px solid #e5e7eb;
+            border-bottom: 1px solid #e3e0da;
         }
 
-        .logo {
-            font-size: 20px;
-            font-weight: 700;
-            color: #111827;
-            letter-spacing: -0.5px;
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .brand-logo {
+            color: #cc0033;
+            font-size: 27px;
+            font-weight: 900;
+            letter-spacing: -2px;
+        }
+
+        .brand-name {
+            font-size: 15px;
+            font-weight: 600;
         }
 
         nav ul {
             display: flex;
-            gap: 30px;
+            align-items: center;
+            gap: 32px;
             list-style: none;
         }
 
         nav a {
-            color: #4b5563;
+            color: #333;
             text-decoration: none;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 500;
             transition: 0.2s;
         }
 
         nav a:hover {
-            color: #111827;
+            color: #cc0033;
         }
 
-        /* -------------------- HERO -------------------- */
+        .nav-contact {
+            padding: 10px 18px;
+            background: #181818;
+            color: white;
+            border-radius: 30px;
+        }
 
-        .hero {
-            min-height: 85vh;
-
-            display: flex;
-            align-items: center;
-
-            padding: 80px 10%;
-
-            background:
-                radial-gradient(circle at 80% 20%, #263859 0%, transparent 35%),
-                linear-gradient(135deg, #0b1120, #111827);
-
+        nav .nav-contact:hover {
+            background: #cc0033;
             color: white;
         }
 
-        .hero-content {
-            max-width: 850px;
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 82vh;
+
+            display: grid;
+            grid-template-columns: 30% 70%;
+            align-items: center;
+            gap: 70px;
+
+            padding: 90px 9% 110px;
         }
 
-        .hero-label {
-            display: inline-block;
 
-            margin-bottom: 20px;
-            padding: 7px 14px;
+        /* PROFILE */
 
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 30px;
+        .profile {
+            text-align: center;
+        }
 
-            color: #cbd5e1;
+        .profile-circle {
+            width: 180px;
+            height: 180px;
+
+            margin: auto;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ffffff,
+                    #e7e4dd
+                );
+
+            border: 4px solid white;
+
+            box-shadow: 0 12px 35px rgba(0,0,0,0.09);
+        }
+
+        .profile-circle span {
+            color: #cc0033;
+            font-size: 48px;
+            font-weight: 900;
+            letter-spacing: -4px;
+        }
+
+        .profile h2 {
+            margin-top: 24px;
+
+            font-size: 25px;
+            letter-spacing: -1px;
+        }
+
+        .school {
+            margin-top: 3px;
+
+            color: #cc0033;
+
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .degree {
+            margin-top: 3px;
+
+            color: #777;
+
             font-size: 14px;
         }
 
+
+        /* HERO CONTENT */
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .small-heading {
+            margin-bottom: 18px;
+
+            color: #cc0033;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
         .hero h1 {
-            font-size: clamp(50px, 8vw, 82px);
-            line-height: 1;
-            letter-spacing: -3px;
-            margin-bottom: 20px;
+            max-width: 850px;
+
+            font-size: clamp(48px, 6vw, 78px);
+            line-height: 0.98;
+
+            letter-spacing: -4px;
         }
 
-        .hero h2 {
-            font-size: 21px;
-            font-weight: 400;
-            color: #94a3b8;
-            margin-bottom: 30px;
-        }
+        .hero-description {
+            max-width: 660px;
 
-        .statement {
-            max-width: 750px;
+            margin-top: 30px;
 
-            font-size: 20px;
-            line-height: 1.7;
+            color: #5f5f5f;
 
-            color: #e2e8f0;
+            font-size: 18px;
+            line-height: 1.75;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 15px;
+            gap: 16px;
+
             margin-top: 35px;
         }
 
         .button {
             display: inline-block;
 
-            padding: 13px 22px;
+            padding: 12px 21px;
 
-            border-radius: 7px;
+            border-radius: 30px;
+
+            font-size: 14px;
+            font-weight: 600;
 
             text-decoration: none;
-            font-size: 15px;
-            font-weight: 600;
 
             transition: 0.2s;
         }
 
-        .primary-button {
-            background: white;
-            color: #111827;
-        }
-
-        .primary-button:hover {
-            background: #e5e7eb;
-        }
-
-        .secondary-button {
-            border: 1px solid #475569;
+        .button-primary {
+            background: #181818;
             color: white;
         }
 
-        .secondary-button:hover {
-            background: #1e293b;
+        .button-primary:hover {
+            background: #cc0033;
         }
 
-        /* -------------------- GENERAL -------------------- */
+        .button-secondary {
+            border: 1px solid #bbb;
+            color: #181818;
+        }
+
+        .button-secondary:hover {
+            border-color: #cc0033;
+            color: #cc0033;
+        }
+
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================== */
 
         section {
-            padding: 100px 10%;
-        }
-
-        .section-header {
-            margin-bottom: 50px;
+            padding: 110px 9%;
         }
 
         .section-label {
-            color: #64748b;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            margin-bottom: 12px;
+
+            color: #cc0033;
+
             font-size: 12px;
             font-weight: 700;
-            margin-bottom: 8px;
+
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
-        .section-header h2 {
-            font-size: 38px;
-            letter-spacing: -1px;
-            color: #111827;
+        .section-title {
+            max-width: 800px;
+
+            font-size: clamp(40px, 5vw, 62px);
+            line-height: 1.03;
+
+            letter-spacing: -3px;
         }
 
-        .section-header p {
-            margin-top: 10px;
-            color: #64748b;
+        .section-intro {
             max-width: 650px;
+
+            margin-top: 20px;
+
+            color: #666;
+
+            font-size: 17px;
         }
 
-        /* -------------------- ABOUT -------------------- */
+
+        /* =========================
+           ABOUT
+        ========================== */
 
         #about {
             background: white;
         }
 
-        .about-container {
+        .about-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 70px;
-            align-items: center;
+            grid-template-columns: 40% 60%;
+            gap: 80px;
+
+            margin-top: 65px;
         }
 
-        .about-text {
-            font-size: 18px;
-            color: #475569;
+        .about-highlight {
+            font-size: 29px;
+            font-weight: 600;
+
+            line-height: 1.4;
+
+            letter-spacing: -1px;
         }
 
-        .about-text p + p {
+        .about-highlight span {
+            color: #cc0033;
+        }
+
+        .about-description {
+            max-width: 650px;
+
+            color: #606060;
+
+            font-size: 17px;
+        }
+
+        .about-description p + p {
             margin-top: 20px;
         }
 
-        .education-card {
-            background: #f8fafc;
+        .education {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
 
-            padding: 35px;
+            margin-top: 65px;
 
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-        }
-
-        .education-card h3 {
-            font-size: 20px;
-            margin-bottom: 20px;
+            border-top: 1px solid #dedede;
+            border-bottom: 1px solid #dedede;
         }
 
         .education-item {
-            margin-bottom: 18px;
+            padding: 25px 20px 25px 0;
         }
 
-        .education-item:last-child {
-            margin-bottom: 0;
+        .education-item + .education-item {
+            padding-left: 25px;
+
+            border-left: 1px solid #dedede;
         }
 
-        .education-item strong {
-            display: block;
-            color: #111827;
+        .education-label {
+            color: #999;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .education-item span {
-            color: #64748b;
+        .education-value {
+            margin-top: 6px;
+
             font-size: 15px;
+            font-weight: 600;
         }
 
-        /* -------------------- SKILLS -------------------- */
+
+        /* =========================
+           SKILLS
+        ========================== */
 
         #skills {
-            background: #f7f8fa;
+            background: #f7f6f2;
         }
 
-        .skills-grid {
+        .skills {
+            margin-top: 60px;
+
+            border-top: 1px solid #d8d5cf;
+        }
+
+        .skill {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            grid-template-columns: 80px 1fr 2fr;
+            align-items: center;
+            gap: 30px;
+
+            padding: 29px 0;
+
+            border-bottom: 1px solid #d8d5cf;
+
+            transition: 0.2s;
         }
 
-        .skill-card {
-            background: white;
-
-            padding: 28px;
-
-            border: 1px solid #e5e7eb;
-            border-radius: 10px;
-
-            transition: 0.25s;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+        .skill:hover {
+            padding-left: 10px;
         }
 
         .skill-number {
-            color: #94a3b8;
+            color: #aaa;
+
             font-size: 13px;
-            margin-bottom: 25px;
         }
 
-        .skill-card h3 {
-            margin-bottom: 7px;
-            font-size: 18px;
+        .skill h3 {
+            font-size: 20px;
         }
 
-        .skill-card p {
-            color: #64748b;
-            font-size: 14px;
+        .skill p {
+            color: #666;
+
+            font-size: 15px;
         }
 
-        /* -------------------- PROJECTS -------------------- */
+
+        /* =========================
+           PROJECTS
+        ========================== */
 
         #projects {
-            background: #111827;
+            background: #181818;
             color: white;
         }
 
         #projects .section-label {
-            color: #94a3b8;
+            color: #e72b59;
         }
 
-        #projects .section-header h2 {
-            color: white;
-        }
-
-        #projects .section-header p {
-            color: #94a3b8;
+        #projects .section-intro {
+            color: #aaa;
         }
 
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
+            gap: 20px;
+
+            margin-top: 65px;
         }
 
-        .project-card {
+        .project {
+            min-height: 440px;
+
             display: flex;
             flex-direction: column;
 
-            min-height: 340px;
+            padding: 32px;
 
-            padding: 30px;
-
-            background: #182235;
-
-            border: 1px solid #263449;
-            border-radius: 12px;
+            border: 1px solid #3a3a3a;
 
             transition: 0.25s;
         }
 
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: #475569;
+        .project:hover {
+            transform: translateY(-6px);
+
+            background: #202020;
+
+            border-color: #cc0033;
         }
 
-        .project-type {
-            color: #94a3b8;
+        .project-number {
+            color: #e72b59;
 
-            font-size: 12px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .project-category {
+            margin-top: 50px;
+
+            color: #888;
+
+            font-size: 11px;
             font-weight: 700;
 
             text-transform: uppercase;
-            letter-spacing: 1px;
-
-            margin-bottom: 35px;
+            letter-spacing: 1.5px;
         }
 
-        .project-card h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
+        .project h3 {
+            margin-top: 12px;
+
+            font-size: 28px;
+            line-height: 1.15;
+
+            letter-spacing: -1px;
         }
 
-        .project-card p {
-            color: #cbd5e1;
+        .project p {
+            margin-top: 18px;
+
+            color: #aaa;
+
             font-size: 15px;
         }
 
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-
+        .project-footer {
             margin-top: auto;
-            padding-top: 30px;
+            padding-top: 35px;
+
+            color: #ddd;
+
+            font-size: 13px;
         }
 
-        .tag {
-            padding: 6px 10px;
 
-            background: #243147;
-            border-radius: 5px;
-
-            color: #cbd5e1;
-            font-size: 12px;
-        }
-
-        /* -------------------- CONTACT -------------------- */
+        /* =========================
+           CONTACT
+        ========================== */
 
         #contact {
-            text-align: center;
-            background: white;
+            background: #cc0033;
+            color: white;
         }
 
-        #contact .section-header {
-            max-width: 650px;
-            margin: auto;
+        #contact .section-label {
+            color: rgba(255,255,255,0.7);
+        }
+
+        #contact .section-title {
+            max-width: 850px;
+        }
+
+        .contact-description {
+            max-width: 600px;
+
+            margin-top: 25px;
+
+            color: rgba(255,255,255,0.85);
+
+            font-size: 18px;
         }
 
         .contact-button {
             display: inline-block;
 
-            margin-top: 30px;
-            padding: 14px 25px;
+            margin-top: 35px;
 
-            background: #111827;
-            color: white;
+            padding: 13px 23px;
 
-            border-radius: 7px;
+            background: white;
+            color: #181818;
+
+            border-radius: 30px;
 
             text-decoration: none;
-            font-weight: 600;
+
+            font-size: 14px;
+            font-weight: 700;
 
             transition: 0.2s;
         }
 
         .contact-button:hover {
-            background: #273449;
+            transform: translateY(-3px);
+
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
 
-        /* -------------------- FOOTER -------------------- */
+
+        /* =========================
+           FOOTER
+        ========================== */
 
         footer {
-            padding: 25px 10%;
-
             display: flex;
             justify-content: space-between;
 
-            background: #0b1120;
-            color: #94a3b8;
+            padding: 26px 9%;
 
-            font-size: 13px;
+            background: #101010;
+            color: #888;
+
+            font-size: 12px;
         }
 
-        /* -------------------- MOBILE -------------------- */
 
-        @media (max-width: 850px) {
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 900px) {
 
             nav {
-                padding: 18px 5%;
+                padding: 20px 6%;
             }
 
             nav ul {
-                gap: 15px;
+                gap: 18px;
             }
 
             .hero {
-                padding: 70px 7%;
-            }
-
-            .hero h1 {
-                letter-spacing: -2px;
-            }
-
-            section {
-                padding: 75px 7%;
-            }
-
-            .about-container {
                 grid-template-columns: 1fr;
-                gap: 40px;
+
+                gap: 50px;
+
+                padding: 65px 7% 85px;
+
+                text-align: center;
             }
 
-            .skills-grid,
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 600px) {
-
-            nav ul {
-                display: none;
+            .hero-content {
+                margin: auto;
             }
 
-            .hero {
-                min-height: 90vh;
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
             }
 
             .hero-buttons {
-                flex-direction: column;
-                align-items: flex-start;
+                justify-content: center;
+            }
+
+            section {
+                padding: 85px 7%;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project {
+                min-height: 350px;
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            nav ul li:not(:last-child) {
+                display: none;
+            }
+
+            .hero h1 {
+                letter-spacing: -2.5px;
+            }
+
+            .profile-circle {
+                width: 150px;
+                height: 150px;
+            }
+
+            .education {
+                grid-template-columns: 1fr;
+            }
+
+            .education-item + .education-item {
+                padding-left: 0;
+
+                border-left: none;
+                border-top: 1px solid #dedede;
+            }
+
+            .skill {
+                grid-template-columns: 40px 1fr;
+            }
+
+            .skill p {
+                grid-column: 2;
             }
 
             footer {
                 flex-direction: column;
+
                 gap: 5px;
             }
+
         }
 
     </style>
+
 </head>
 
+
 <body>
+
 
     <!-- NAVIGATION -->
 
     <nav>
 
-        <div class="logo">
-            JG.
+        <div class="brand">
+
+            <div class="brand-logo">
+                JG
+            </div>
+
+            <div class="brand-name">
+                Jason's Portfolio
+            </div>
+
         </div>
 
+
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#contact" class="nav-contact">
+                    Connect
+                </a>
+            </li>
+
         </ul>
 
     </nav>
 
 
-    <!-- HERO / PERSONAL STATEMENT -->
+
+    <!-- HERO -->
 
     <header class="hero">
 
-        <div class="hero-content">
 
-            <div class="hero-label">
-                Finance Student · Rutgers Business School
+        <div class="profile">
+
+            <div class="profile-circle">
+                <span>JG</span>
             </div>
 
-            <h1>
-                Jason<br>
-                Gonzalez
-            </h1>
-
             <h2>
-                Finance · Financial Markets · Risk Management
+                Jason Gonzalez
             </h2>
 
-            <!-- Required one-sentence personal statement -->
+            <div class="school">
+                Rutgers Business School
+            </div>
 
-            <p class="statement">
-                I am a finance student at Rutgers Business School focused on
-                financial markets, investment analysis, and disciplined
-                risk management.
+            <div class="degree">
+                B.S. Finance
+            </div>
+
+        </div>
+
+
+
+        <div class="hero-content">
+
+            <div class="small-heading">
+                Finance · Markets · Risk
+            </div>
+
+            <!-- PERSONAL STATEMENT -->
+
+            <h1>
+                Finance student focused on markets, risk, and opportunity.
+            </h1>
+
+            <p class="hero-description">
+                I'm Jason, a Finance student at Rutgers Business School
+                with a strong interest in financial markets, derivatives,
+                investment analysis, and risk management.
             </p>
+
 
             <div class="hero-buttons">
 
-                <a href="#projects" class="button primary-button">
-                    View My Work
+                <a
+                    href="#projects"
+                    class="button button-primary"
+                >
+                    Explore My Work
                 </a>
 
-                <a href="#skills" class="button secondary-button">
-                    My Skills
+                <a
+                    href="#skills"
+                    class="button button-secondary"
+                >
+                    View Skills
                 </a>
 
             </div>
@@ -556,71 +820,95 @@
     </header>
 
 
+
     <!-- ABOUT -->
 
     <section id="about">
 
-        <div class="section-header">
-
-            <div class="section-label">About</div>
-
-            <h2>Building a foundation in finance.</h2>
-
+        <div class="section-label">
+            01 / About
         </div>
 
+        <h2 class="section-title">
+            Building a foundation in finance.
+        </h2>
 
-        <div class="about-container">
 
-            <div class="about-text">
+        <div class="about-grid">
 
-                <p>
-                    I am a Finance student at Rutgers Business School in
-                    New Brunswick with a strong interest in financial markets,
-                    investing, derivatives, and risk management.
-                </p>
+            <div class="about-highlight">
 
-                <p>
-                    My academic work and independent study of financial markets
-                    have helped me develop an analytical approach to evaluating
-                    risk, understanding market behavior, and making
-                    data-informed decisions.
-                </p>
+                Rutgers Business School student combining
+                <span>financial education</span>
+                with hands on market experience.
 
             </div>
 
 
-            <div class="education-card">
+            <div class="about-description">
 
-                <h3>Education</h3>
+                <p>
+                    I am pursuing a Bachelor of Science in Finance at
+                    Rutgers Business School in New Brunswick. My primary
+                    interests include financial markets, investment analysis,
+                    derivatives, and risk management.
+                </p>
 
-                <div class="education-item">
+                <p>
+                    Through coursework and independent study of financial
+                    markets, I have developed an analytical approach to
+                    evaluating risk, understanding market behavior, and
+                    making informed financial decisions.
+                </p>
 
-                    <strong>Rutgers Business School</strong>
+                <p>
+                    My goal is to continue building my financial knowledge
+                    while strengthening the analytical, communication, and
+                    decision making skills needed to succeed in the
+                    financial industry.
+                </p>
 
-                    <span>
-                        New Brunswick, New Jersey
-                    </span>
+            </div>
 
+        </div>
+
+
+        <div class="education">
+
+            <div class="education-item">
+
+                <div class="education-label">
+                    University
                 </div>
 
-                <div class="education-item">
-
-                    <strong>B.S. in Finance</strong>
-
-                    <span>
-                        Rutgers University
-                    </span>
-
+                <div class="education-value">
+                    Rutgers University
                 </div>
 
-                <div class="education-item">
+            </div>
 
-                    <strong>Areas of Interest</strong>
 
-                    <span>
-                        Financial Markets · Investments · Derivatives · Risk
-                    </span>
+            <div class="education-item">
 
+                <div class="education-label">
+                    School
+                </div>
+
+                <div class="education-value">
+                    Rutgers Business School
+                </div>
+
+            </div>
+
+
+            <div class="education-item">
+
+                <div class="education-label">
+                    Major
+                </div>
+
+                <div class="education-value">
+                    Finance
                 </div>
 
             </div>
@@ -628,142 +916,180 @@
         </div>
 
     </section>
+
 
 
     <!-- SKILLS -->
 
     <section id="skills">
 
-        <div class="section-header">
-
-            <div class="section-label">Skills</div>
-
-            <h2>What I bring to the table.</h2>
-
-            <p>
-                A combination of financial knowledge, analytical thinking,
-                and professional skills developed through coursework and
-                hands-on market experience.
-            </p>
-
+        <div class="section-label">
+            02 / Skills
         </div>
 
+        <h2 class="section-title">
+            Core skills & capabilities.
+        </h2>
 
-        <div class="skills-grid">
+        <p class="section-intro">
+            Skills developed through finance coursework,
+            independent market experience, and professional development.
+        </p>
 
-            <div class="skill-card">
 
-                <div class="skill-number">01</div>
+        <div class="skills">
 
-                <h3>Financial Analysis</h3>
+
+            <div class="skill">
+
+                <div class="skill-number">
+                    01
+                </div>
+
+                <h3>
+                    Financial Analysis
+                </h3>
 
                 <p>
-                    Evaluating financial information and applying analytical
-                    frameworks to business and investment decisions.
+                    Evaluating financial information and applying
+                    analytical thinking to business and investment decisions.
                 </p>
 
             </div>
 
 
-            <div class="skill-card">
 
-                <div class="skill-number">02</div>
+            <div class="skill">
 
-                <h3>Microsoft Excel</h3>
+                <div class="skill-number">
+                    02
+                </div>
+
+                <h3>
+                    Microsoft Excel
+                </h3>
 
                 <p>
-                    Organizing, analyzing, and presenting financial and
-                    business data using spreadsheets.
+                    Organizing, analyzing, and presenting financial
+                    and business data using spreadsheets.
                 </p>
 
             </div>
 
 
-            <div class="skill-card">
 
-                <div class="skill-number">03</div>
+            <div class="skill">
 
-                <h3>Market Analysis</h3>
+                <div class="skill-number">
+                    03
+                </div>
+
+                <h3>
+                    Market Analysis
+                </h3>
 
                 <p>
-                    Studying financial market behavior, price movement,
-                    and market conditions.
+                    Studying market structure, price behavior,
+                    and changing financial market conditions.
                 </p>
 
             </div>
 
 
-            <div class="skill-card">
 
-                <div class="skill-number">04</div>
+            <div class="skill">
 
-                <h3>Risk Management</h3>
+                <div class="skill-number">
+                    04
+                </div>
+
+                <h3>
+                    Risk Management
+                </h3>
 
                 <p>
-                    Understanding position sizing, risk and reward,
+                    Applying position sizing, risk and reward analysis,
                     capital preservation, and disciplined decision making.
                 </p>
 
             </div>
 
 
-            <div class="skill-card">
 
-                <div class="skill-number">05</div>
+            <div class="skill">
 
-                <h3>Options & Derivatives</h3>
+                <div class="skill-number">
+                    05
+                </div>
+
+                <h3>
+                    Options & Derivatives
+                </h3>
 
                 <p>
                     Understanding options, futures, payoff structures,
-                    hedging, and derivative market mechanics.
+                    hedging concepts, and derivative market mechanics.
                 </p>
 
             </div>
 
 
-            <div class="skill-card">
 
-                <div class="skill-number">06</div>
+            <div class="skill">
 
-                <h3>Communication & Teamwork</h3>
+                <div class="skill-number">
+                    06
+                </div>
+
+                <h3>
+                    Communication
+                </h3>
 
                 <p>
-                    Communicating ideas clearly and collaborating effectively
+                    Presenting ideas clearly and collaborating effectively
                     in academic and professional environments.
                 </p>
 
             </div>
+
 
         </div>
 
     </section>
 
 
+
     <!-- PROJECTS -->
 
     <section id="projects">
 
-        <div class="section-header">
-
-            <div class="section-label">Selected Work</div>
-
-            <h2>Projects</h2>
-
-            <p>
-                Selected academic and independent projects demonstrating
-                my interests in finance and financial markets.
-            </p>
-
+        <div class="section-label">
+            03 / Selected Work
         </div>
+
+        <h2 class="section-title">
+            Finance & markets.
+        </h2>
+
+        <p class="section-intro">
+            Selected academic and independent projects demonstrating
+            my interests in financial markets, research, derivatives,
+            and risk management.
+        </p>
 
 
         <div class="projects-grid">
 
+
             <!-- PROJECT 1 -->
 
-            <article class="project-card">
+            <article class="project">
 
-                <div class="project-type">
+                <div class="project-number">
+                    01
+                </div>
+
+                <div class="project-category">
                     Rutgers · Course Project
                 </div>
 
@@ -772,29 +1098,28 @@
                 </h3>
 
                 <p>
-                    An academic analysis of call and put options, payoff
-                    structures, margin requirements, and risk management
-                    concepts used within derivative markets.
+                    An academic project examining call and put options,
+                    payoff structures, margin requirements, and risk
+                    management concepts used within derivative markets.
                 </p>
 
-                <div class="project-tags">
-
-                    <span class="tag">Options</span>
-
-                    <span class="tag">Derivatives</span>
-
-                    <span class="tag">Risk Analysis</span>
-
+                <div class="project-footer">
+                    Options · Derivatives · Risk Analysis
                 </div>
 
             </article>
 
 
+
             <!-- PROJECT 2 -->
 
-            <article class="project-card">
+            <article class="project">
 
-                <div class="project-type">
+                <div class="project-number">
+                    02
+                </div>
+
+                <div class="project-category">
                     Rutgers · Finance Research
                 </div>
 
@@ -803,29 +1128,29 @@
                 </h3>
 
                 <p>
-                    A research project examining Paul Tudor Jones' career,
-                    trading philosophy, approach to risk, and the principles
-                    that contributed to his longevity in financial markets.
+                    A research project examining Paul Tudor Jones'
+                    career, trading philosophy, approach to risk,
+                    and the principles associated with longevity
+                    in financial markets.
                 </p>
 
-                <div class="project-tags">
-
-                    <span class="tag">Research</span>
-
-                    <span class="tag">Markets</span>
-
-                    <span class="tag">Risk Management</span>
-
+                <div class="project-footer">
+                    Research · Markets · Risk Management
                 </div>
 
             </article>
 
 
+
             <!-- PROJECT 3 -->
 
-            <article class="project-card">
+            <article class="project">
 
-                <div class="project-type">
+                <div class="project-number">
+                    03
+                </div>
+
+                <div class="project-category">
                     Independent Project
                 </div>
 
@@ -834,72 +1159,69 @@
                 </h3>
 
                 <p>
-                    An independent study of futures markets focused on
-                    position sizing, risk-to-reward relationships,
+                    An independent study of futures markets focused
+                    on position sizing, risk to reward relationships,
                     trade evaluation, and disciplined capital management.
                 </p>
 
-                <div class="project-tags">
-
-                    <span class="tag">Futures</span>
-
-                    <span class="tag">Market Analysis</span>
-
-                    <span class="tag">Risk</span>
-
+                <div class="project-footer">
+                    Futures · Market Analysis · Risk
                 </div>
 
             </article>
 
+
         </div>
 
     </section>
+
 
 
     <!-- CONTACT -->
 
     <section id="contact">
 
-        <div class="section-header">
-
-            <div class="section-label">Connect</div>
-
-            <h2>Let's connect.</h2>
-
-            <p>
-                I'm always interested in learning, building new skills,
-                and connecting with others in finance and business.
-            </p>
-
-            <!-- CHANGE YOURUSERNAME TO YOUR GITHUB USERNAME -->
-
-            <a
-                class="contact-button"
-                href="https://github.com/YOURUSERNAME"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                View GitHub →
-            </a>
-
+        <div class="section-label">
+            04 / Connect
         </div>
 
+        <h2 class="section-title">
+            Always looking for the next opportunity to learn and grow.
+        </h2>
+
+        <p class="contact-description">
+            I'm interested in developing my financial skills,
+            gaining professional experience, and connecting with
+            others across finance and business.
+        </p>
+
+        <a
+            href="#"
+            onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
+            class="contact-button"
+        >
+            Back to Top ↑
+        </a>
+
     </section>
+
 
 
     <!-- FOOTER -->
 
     <footer>
 
-        <span>
+        <div>
             © 2026 Jason Gonzalez
-        </span>
+        </div>
 
-        <span>
-            Finance · Rutgers Business School
-        </span>
+        <div>
+            Rutgers Business School · Finance
+        </div>
 
     </footer>
 
+
 </body>
+
 </html>
