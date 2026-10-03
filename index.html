@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jason Gonzalez | Portfolio</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f7fa;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+
+        nav {
+            background-color: #111827;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            position: sticky;
+            top: 0;
+        }
+
+        nav h2 {
+            font-size: 22px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        /* Hero */
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #111827;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            color: #60a5fa;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            font-size: 20px;
+        }
+
+        .hero a {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .hero a:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* General Sections */
+
+        section {
+            padding: 80px 10%;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        /* About */
+
+        .about {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        /* Skills */
+
+        #skills {
+            background-color: white;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .skill {
+            background-color: #111827;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        /* Projects */
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .project-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .project-card h3 {
+            margin-bottom: 15px;
+            color: #111827;
+        }
+
+        .project-card p {
+            margin-bottom: 20px;
+        }
+
+        .project-card a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact */
+
+        #contact {
+            background-color: white;
+            text-align: center;
+        }
+
+        #contact p {
+            margin-bottom: 20px;
+        }
+
+        #contact a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Footer */
+
+        footer {
+            background-color: #111827;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <h2>Jason Gonzalez</h2>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- Personal Statement -->
+
+    <header class="hero">
+
+        <h1>Jason Gonzalez</h1>
+
+        <h2>Finance Student | Rutgers Business School</h2>
+
+        <p>
+            I am a finance student at Rutgers Business School with an interest
+            in financial markets, investment analysis, and risk management.
+        </p>
+
+        <a href="#projects">View My Projects</a>
+
+    </header>
+
+
+    <!-- About -->
+
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <div class="about">
+
+            <p>
+                I am currently studying Finance at Rutgers Business School in
+                New Brunswick. I am interested in financial markets, investing,
+                trading, and understanding how businesses and investors make
+                financial decisions. Through my coursework and personal
+                experience studying financial markets, I have developed skills
+                in financial analysis, risk management, problem solving, and
+                market research.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+
+    <section id="skills">
+
+        <h2>Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill">Financial Analysis</div>
+
+            <div class="skill">Microsoft Excel</div>
+
+            <div class="skill">Market Analysis</div>
+
+            <div class="skill">Risk Management</div>
+
+            <div class="skill">Options & Derivatives</div>
+
+            <div class="skill">Investment Research</div>
+
+            <div class="skill">Problem Solving</div>
+
+            <div class="skill">Communication</div>
+
+            <div class="skill">Teamwork</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+
+    <section id="projects">
+
+        <h2>Projects</h2>
+
+        <div class="projects-container">
+
+
+            <!-- Project 1 -->
+
+            <div class="project-card">
+
+                <h3>Options & Derivatives Analysis</h3>
+
+                <p>
+                    An academic project examining call and put options,
+                    payoff structures, margin requirements, and risk management
+                    strategies used in financial derivatives.
+                </p>
+
+                <a href="#">Academic Project</a>
+
+            </div>
+
+
+            <!-- Project 2 -->
+
+            <div class="project-card">
+
+                <h3>Paul Tudor Jones Market Analysis</h3>
+
+                <p>
+                    A finance research project analyzing Paul Tudor Jones'
+                    career, trading philosophy, approach to risk management,
+                    and the factors that contributed to his longevity in
+                    financial markets.
+                </p>
+
+                <a href="#">Finance Research Project</a>
+
+            </div>
+
+
+            <!-- Project 3 -->
+
+            <div class="project-card">
+
+                <h3>Financial Market Risk Management</h3>
+
+                <p>
+                    A personal project focused on studying market behavior,
+                    position sizing, risk-to-reward relationships, and
+                    disciplined risk management within futures markets.
+                </p>
+
+                <a href="#">Personal Finance Project</a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+
+    <section id="contact">
+
+        <h2>Contact</h2>
+
+        <p>
+            Interested in connecting? Visit my GitHub profile below.
+        </p>
+
+        <!-- Replace YOURUSERNAME with your actual GitHub username -->
+
+        <a href="https://github.com/YOURUSERNAME" target="_blank">
+            GitHub Profile
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>© 2026 Jason Gonzalez | Rutgers Business School</p>
+
+    </footer>
+
+
+</body>
+
+</html>
